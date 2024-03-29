@@ -7,11 +7,19 @@
 
 .header {
     background: var(--header-bg-color);
+    @include abstracts.breakpoint(lg) {
+        box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+    }
 }
 
 .top-bar {
     @extend %flexItemCenter;
+    position: relative;
     padding: 30px 0;
+
+    @include abstracts.breakpoint(md) {
+        justify-content: space-between;
+    }
     @include abstracts.breakpoint(sm) {
         padding: 16px 0;
     }
@@ -28,26 +36,85 @@
 }
 
 .navbar {
-    margin-left: 144px;
+    margin-left: 129px;
+
+    &__item {
+        &:hover .dropdown {
+            display: block;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            &:hover .dropdown {
+                display: none;
+            }
+            width: 100%;
+        }
+    }
+    &__close-btn {
+        display: none;
+        @include abstracts.breakpoint(lg) {
+            display: block;
+            padding: 10px 40px;
+        }
+    }
 
     @include abstracts.breakpoint(xl) {
-        margin-left: 50px;
+        margin-left: 35px;
     }
     @include abstracts.breakpoint(lg) {
-        display: none;
+        background: #fff;
+        position: fixed;
+        z-index: 9;
+        inset: 0 50% 0 0;
+        padding: 20px 0;
+        margin-left: 0;
+
+        translate: -100%;
+        transition: translate, 0.5s;
+        &.show {
+            translate: 0%;
+        }
+        &.show ~ &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity, visibility;
+        transition-duration: 0.5;
+
+        @include abstracts.breakpoint(lg) {
+            z-index: 8;
+            position: fixed;
+            inset: 0;
+            background: rgba($color: #000000, $alpha: 0.4);
+        }
+    }
     &__list {
         @extend %flexItemCenter;
-        column-gap: 30px;
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__link {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        padding: 0 40px;
         @extend %flexItemCenter;
         column-gap: 6px;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+        @include abstracts.breakpoint(lg) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
     }
 
     &__arrow {
@@ -59,6 +126,10 @@
     @extend %flexItemCenter;
     column-gap: 20px;
     margin-left: auto;
+
+    @include abstracts.breakpoint(md) {
+        margin: 0;
+    }
 
     &__group {
         @extend %flexItemCenter;
