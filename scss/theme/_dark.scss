@@ -25,4 +25,21 @@ html.dark {
         brightness(106%) contrast(96%);
     --navbar-bg-color: #292e39;
     --navbar-shadow: rgba(23, 28, 40, 0.4);
+
+    // cate-item
+    --cate-bg-color: #171c28;
+    --cate-bg-thumb-color: #292e39;
+    --cate-title-color: #fff;
+
+    // button-filter
+    --filter-bg-color: #171c28;
+    --filter-color: #ffffff;
+
+    // product-card
+    --product-bg-color: #171c28;
+    --product-shadow: rgba(0, 0, 0, 0.2);
+
+    // like-btn
+    --like-btn-bg-color: #292e39;
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
 }

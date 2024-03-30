@@ -24,4 +24,24 @@ html {
     // navbar
     --navbar-bg-color: #fff;
     --navbar-shadow: rgba(200, 200, 200, 0.4);
+
+    // cate-item
+    --cate-bg-color: #eee;
+    --cate-bg-thumb-color: #fff;
+    --cate-title-color: #000;
+    @include abstracts.screen(md) {
+        --cate-bg-color: #fff;
+    }
+
+    // button-filter
+    --filter-bg-color: #fff;
+    --filter-color: #6c6c72;
+
+    // product-card
+    --product-bg-color: #fff;
+    --product-shadow: rgba(237, 237, 246, 0.2);
+
+    // like-btn
+    --like-btn-bg-color: #fff;
+    --like-btn-shadow: rgba(124, 124, 124, 0.2);
 }
