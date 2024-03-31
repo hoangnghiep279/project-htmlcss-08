@@ -28,8 +28,9 @@
         <script>
             load("#header", "./templates/header.html");
         </script>
+
         <div class="container home">
-            <section class="home__container">
+            <div class="home__container">
                 <div class="slideshow">
                     <div class="slideshow__inner">
                         <div class="slideshow__item">
@@ -50,7 +51,7 @@
                         <span class="slideshow__num">5</span>
                     </div>
                 </div>
-            </section>
+            </div>
             <section class="home__container">
                 <div class="home__row">
                     <h2 class="home__heading">Browse Categories</h2>
@@ -61,10 +62,10 @@
                             <article class="cate-item">
                                 <img src="./assets/img/cate-item/item-1.png" alt="" class="cate-item__thumb" />
 
-                                <section class="cate-item__info">
+                                <div class="cate-item__info">
                                     <h3 class="cate-item__title">$24 - $150</h3>
                                     <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
-                                </section>
+                                </div>
                             </article>
                         </a>
                     </div>
@@ -72,10 +73,10 @@
                         <a href="#!">
                             <article class="cate-item">
                                 <img src="./assets/img/cate-item/item-2.png" alt="" class="cate-item__thumb" />
-                                <section class="cate-item__info">
+                                <div class="cate-item__info">
                                     <h3 class="cate-item__title">$37 - $160</h3>
                                     <p class="cate-item__desc">Espresso arabica and robusta beans</p>
-                                </section>
+                                </div>
                             </article>
                         </a>
                     </div>
@@ -83,10 +84,10 @@
                         <a href="#!">
                             <article class="cate-item">
                                 <img src="./assets/img/cate-item/item-3.png" alt="" class="cate-item__thumb" />
-                                <section class="cate-item__info">
+                                <div class="cate-item__info">
                                     <h3 class="cate-item__title">$32 - $160</h3>
                                     <p class="cate-item__desc">Lavazza top class whole bean coffee blend</p>
-                                </section>
+                                </div>
                             </article>
                         </a>
                     </div>
@@ -96,10 +97,138 @@
             <section class="home__container">
                 <div class="home__row">
                     <h2 class="home__heading">Total LavAzza 1320</h2>
-                    <button class="home__filter">
-                        Filter
-                        <img src="./assets/icons/filter.svg" alt="" class="icon home__filter-icon" />
-                    </button>
+                    <div class="filter-wrap">
+                        <button class="home__filter js-toggle" toggle-target="#home-filter">
+                            Filter
+                            <img src="./assets/icons/filter.svg" alt="" class="icon home__filter-icon" />
+                        </button>
+
+                        <div id="home-filter" class="filter hide">
+                            <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
+                            <h3 class="filter__heading">Filter</h3>
+                            <form class="filter__form">
+                                <div class="filter__row filter__content">
+                                    <!-- col1 -->
+                                    <div class="filter-col">
+                                        <label for="" class="filter__form-label">Price</label>
+                                        <div class="filter__form-group">
+                                            <div
+                                                class="filter__form-slider"
+                                                style="--min-value: 10%; --max-value: 60%"
+                                            ></div>
+                                        </div>
+                                        <div class="filter__form-group filter__form-group--inline">
+                                            <div>
+                                                <label for="" class="filter__form-label filter__form-label--small">
+                                                    Minimum
+                                                </label>
+                                                <div class="filter__form-text-input filter__form-text-input--small">
+                                                    <input
+                                                        type="text"
+                                                        name=""
+                                                        id=""
+                                                        value="$30.00"
+                                                        class="filter__form-input"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label for="" class="filter__form-label filter__form-label--small">
+                                                    Maximum
+                                                </label>
+                                                <div class="filter__form-text-input filter__form-text-input--small">
+                                                    <input
+                                                        type="text"
+                                                        name=""
+                                                        id=""
+                                                        value="$100.00"
+                                                        class="filter__form-input"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter__separate"></div>
+                                    <!-- col2 -->
+                                    <div class="filter-col">
+                                        <label for="" class="filter__form-label">Size/Weight</label>
+                                        <div class="filter__form-group">
+                                            <div class="filter__form-select-wrap">
+                                                <div class="filter__form-select" style="--width: 158px">
+                                                    500g
+                                                    <img
+                                                        src="./assets/icons/select-arrow.svg"
+                                                        alt=""
+                                                        class="filter__form-select-arrow icon"
+                                                    />
+                                                </div>
+                                                <div class="filter__form-select">
+                                                    Gram
+                                                    <img
+                                                        src="./assets/icons/select-arrow.svg"
+                                                        alt=""
+                                                        class="filter__form-select-arrow icon"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__form-group">
+                                            <div class="filter__form-tags">
+                                                <button class="filter__form-tag">Small</button>
+                                                <button class="filter__form-tag">Medium</button>
+                                                <button class="filter__form-tag">Large</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter__separate"></div>
+
+                                    <!-- col3 -->
+                                    <div class="filter-col">
+                                        <label for="" class="filter__form-label">Brand</label>
+                                        <div class="filter__form-group">
+                                            <div class="filter__form-text-input">
+                                                <input
+                                                    type="text"
+                                                    name=""
+                                                    id=""
+                                                    class="filter__form-input"
+                                                    placeholder="Search brand name"
+                                                />
+                                                <img
+                                                    src="./assets/icons/search.svg"
+                                                    alt=""
+                                                    class="filter__form-input-icon icon"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="filter__form-group">
+                                            <div class="filter__form-tags">
+                                                <button class="filter__form-tag">Lavazza</button>
+                                                <button class="filter__form-tag">Nescafe</button>
+                                                <button class="filter__form-tag">Starbucks</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__row filter__footer">
+                                    <button
+                                        class="btn btn--text filter__btn-cancel js-toggle"
+                                        toggle-target="#home-filter"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <button
+                                        class="btn btn--primary filter__btn-submit js-toggle"
+                                        toggle-target="#home-filter"
+                                    >
+                                        Show Result
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
                     <div class="col">

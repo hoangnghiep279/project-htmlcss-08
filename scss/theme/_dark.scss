@@ -42,4 +42,13 @@ html.dark {
     // like-btn
     --like-btn-bg-color: #292e39;
     --like-btn-shadow: rgba(124, 124, 124, 0.2);
+
+    // filter
+    --filter-bg-color-btn: #171c28;
+    --filter-bg-color: #292e39;
+    --filter-form-shadow: rgba(0, 0, 0, 0.4);
+
+    --form-tag-bg-color: #171c28;
+    --filter-arrow-up-color: brightness(0) saturate(100%) invert(15%) sepia(14%) saturate(867%) hue-rotate(183deg)
+        brightness(94%) contrast(91%);
 }

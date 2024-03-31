@@ -37,7 +37,9 @@ textarea,
 select {
     font-family: inherit;
     color: inherit;
+    border: none;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 .icon {
