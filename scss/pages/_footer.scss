@@ -1,0 +1,196 @@
+@use "../abstracts";
+
+.footer {
+    font-family: "Lato", sans-serif;
+    margin-top: 50px;
+    background: var(--footer-bg-color);
+    padding: 100px 0;
+    font-size: 1.4rem;
+    &__row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.3fr 1fr 2fr;
+        gap: 30px;
+
+        @include abstracts.screen(xl) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include abstracts.screen(lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include abstracts.screen(md) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__item + &__item {
+        margin-top: 50px;
+    }
+
+    &__desc,
+    &__item-link {
+        width: 100%;
+        margin-top: 20px;
+
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    &__item-link {
+        margin: 0;
+
+        display: inline-block;
+        padding: 10px 0;
+        line-height: 1;
+        &:hover {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+
+    &__check {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+
+        font-weight: 600;
+        line-height: 144.444%;
+        &:hover {
+            font-weight: 900;
+        }
+    }
+
+    &__arrow {
+        rotate: 180deg;
+        // @include abstracts.screen(sm) {
+        //     margin-top: -2px;
+        // }
+    }
+
+    &__heading {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 145.455%;
+    }
+
+    &__list {
+        margin-top: 20px;
+    }
+
+    &__label {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 145.455%;
+    }
+    &__link,
+    &__text {
+        font-weight: 400;
+        line-height: 145.455%;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 44px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        padding: 0 0 0 16px;
+        overflow: hidden;
+
+        &-input {
+            flex: 4;
+            background: transparent;
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem;
+            }
+        }
+        &-icon {
+            width: 14px;
+            filter: var(--icon-color);
+        }
+
+        &-btn {
+            margin-left: 10px;
+            border-radius: 6px;
+            flex: 1;
+            background: #ffb700;
+            height: 100%;
+        }
+    }
+
+    &__bottom {
+        margin-top: 80px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+            justify-content: flex-start;
+            gap: 40px;
+        }
+    }
+
+    &__application {
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+    &__app-link {
+        width: 148px;
+    }
+    &__app-img {
+        width: 100%;
+        height: 65px;
+
+        filter: var(--icon-color);
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        margin-left: 27px;
+        gap: 20px;
+    }
+    &__social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+
+        &-icon {
+            font-size: 2.5rem;
+        }
+        &--facebook:hover {
+            color: #4863a9;
+        }
+        &--twitter:hover {
+            color: #4999e6;
+        }
+        &--instagram:hover {
+            color: #e22868;
+        }
+        &--linkedin:hover {
+            color: #2f71ab;
+        }
+        &--tiktok:hover {
+            opacity: 0.9;
+        }
+        &--youtube:hover {
+            color: #ff0000;
+        }
+    }
+
+    &__select {
+        background: transparent;
+        width: 110px;
+        height: 35px;
+        border-radius: 4px;
+        font-weight: 600;
+        border: 1px solid #d2d1d6;
+        option {
+            background: var(--footer-bg-color);
+        }
+    }
+}
