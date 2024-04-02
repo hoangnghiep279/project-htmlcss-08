@@ -1,10 +1,36 @@
+@use "../abstracts";
+
+$error-color: #d5544b;
 .form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
     &__group {
         margin-top: 30px;
+        @include abstracts.screen(md) {
+            + .form__group {
+                margin-top: 20px;
+            }
+        }
 
         &--inline {
             display: flex;
             align-items: center;
+        }
+    }
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: $error-color;
+            background: rgba($color: $error-color, $alpha: 0.1);
+        }
+
+        .form__error,
+        .form__icon-error {
+            display: block;
+        }
+        .form__icon {
+            display: none;
         }
     }
     &__text-input {
@@ -14,6 +40,9 @@
         align-items: center;
         border-radius: 10px;
         border: 1.5px solid #d2d1d6;
+        @include abstracts.screen(md) {
+            height: 48px;
+        }
 
         &:focus-within {
             border-color: #77dae6;
@@ -28,10 +57,28 @@
 
         &::placeholder {
             color: #d2d1d6;
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+            }
         }
+    }
+
+    &__error {
+        text-align: left;
+        color: $error-color;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 10px;
+        display: none;
     }
     &__icon {
         margin-left: 12px;
+
+        &-error {
+            display: none;
+            margin-left: 12px;
+            animation: shake 0.8s;
+        }
     }
 
     &__pull-right {
@@ -46,6 +93,9 @@
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
         }
         &::before,
         &::after {

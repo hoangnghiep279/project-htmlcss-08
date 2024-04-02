@@ -54,4 +54,21 @@ html.dark {
 
     // footer
     --footer-bg-color: #171c28;
+
+    // auth
+    --auth-bg-color: #292e39;
+    --intro-text-color: #b9babe;
+    --auth-intro-color: #171c28;
+    --auth-btn-google: #b9babe;
+    --auth-btn-google-icon: brightness(0) saturate(100%) invert(97%) sepia(11%) saturate(476%) hue-rotate(180deg)
+        brightness(78%) contrast(87%);
+    --auth-heading-color: var(--auth-btn-google);
+
+    // product-detail
+    --product-detail-bg: #292e39;
+    --product-info-bg: #171c28;
+
+    // breadcrumbs
+    --breadcrumb-bg: #171c28;
+    --breadcrumb-shadow: rgba(23, 28, 40, 0.2);
 }
