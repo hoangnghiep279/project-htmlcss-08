@@ -23,6 +23,28 @@
         inset: 0;
         border-radius: 0;
     }
+    &__form-text-input {
+        display: flex;
+        align-items: center;
+        width: 334px;
+        height: 44px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        padding: 0 16px;
+        overflow: hidden;
+
+        &--small {
+            width: 121px;
+            height: 36px;
+            padding: 0 12px;
+            @include abstracts.screen(xl) {
+                width: 100%;
+            }
+        }
+        @include abstracts.screen(sm) {
+            width: 100%;
+        }
+    }
 
     &.hide {
         opacity: 0;

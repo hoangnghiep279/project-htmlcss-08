@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .search-bar {
     align-items: center;
     height: 50px;
@@ -11,7 +13,9 @@
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 142.857%;
-
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
         &::placeholder {
             color: #9e9da8;
             font-weight: 400;

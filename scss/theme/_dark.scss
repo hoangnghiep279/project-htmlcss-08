@@ -52,9 +52,12 @@ html.dark {
     --filter-bg-color: #292e39;
     --filter-form-shadow: rgba(0, 0, 0, 0.4);
 
+    // form
     --form-tag-bg-color: #171c28;
     --filter-arrow-up-color: brightness(0) saturate(100%) invert(15%) sepia(14%) saturate(867%) hue-rotate(183deg)
         brightness(94%) contrast(91%);
+    --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+    --form-select-option: #171c28;
 
     // footer
     --footer-bg-color: #171c28;
@@ -95,6 +98,7 @@ html.dark {
     --checkout-cart-info-bg: #171c28;
     --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
     --checkout-cart-item-border: #292e39;
+    --payment-item-bg: #292e39;
 
     // gift-item
     --gift-item-icon-bg: #292e39;

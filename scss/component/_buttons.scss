@@ -57,7 +57,6 @@
 
     &--small {
         height: 40px;
-        padding: 0 16px;
     }
 
     &--text {
@@ -74,6 +73,10 @@
     }
     &--rounded {
         border-radius: 99px;
+    }
+    &--danger {
+        color: #fff;
+        background: #d5544b;
     }
 
     &[disabled],
