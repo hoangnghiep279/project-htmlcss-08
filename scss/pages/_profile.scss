@@ -1,0 +1,117 @@
+.profile {
+    margin-bottom: 50px;
+    &__container {
+        margin-top: 30px;
+    }
+    &__sidebar {
+        border-radius: 20px;
+        background: var(--profile-sidebar-bg);
+        box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
+        overflow: hidden;
+        padding-bottom: 30px;
+    }
+
+    &-user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px 20px;
+        background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%),
+            url("../img/profile/cover.png") no-repeat center / cover;
+        border-radius: 20px 20px 0px 0px;
+
+        box-shadow: 0px 20px 60px 10px var(--profile-user-shadow);
+
+        &__name {
+            margin-top: 15px;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 144.444%;
+        }
+
+        &__desc {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+    }
+    &__avatar {
+        width: 121px;
+        height: 121px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+        border: 5px solid rgba(255, 255, 255, 0.2);
+        background: #ccc content-box;
+    }
+
+    &-menu {
+        margin-top: 30px;
+        padding: 0 30px;
+
+        &__title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+
+        &__list {
+            margin-top: 17px;
+        }
+        &__link {
+            padding: 0 6px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 146.667%;
+
+            &:hover {
+                background: #ebebeb;
+                border-radius: 5px;
+            }
+        }
+        &__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+        }
+    }
+    &__desc {
+        margin-bottom: 16px;
+    }
+}
+
+.favourite-item {
+    display: flex;
+    gap: 20px;
+
+    &__thumb {
+        width: 151px;
+        height: 108px;
+        object-fit: contain;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        gap: 20px;
+    }
+
+    &__price {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+}

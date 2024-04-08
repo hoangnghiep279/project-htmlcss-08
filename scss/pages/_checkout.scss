@@ -18,11 +18,11 @@
     }
 }
 
-.cart-info {
+.page-container {
     padding: 30px;
     border-radius: 20px;
-    background: var(--checkout-cart-info-bg);
-    box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
+    background: var(--checkout-page-container-bg);
+    box-shadow: 0px 20px 60px 10px var(--checkout-page-container-shadow);
 
     &__heading {
         font-size: 2.4rem;
@@ -41,6 +41,7 @@
         font-weight: 400;
         line-height: 146.667%;
     }
+
     &__top {
         display: flex;
         align-items: center;
@@ -106,6 +107,13 @@
         &--bold {
             font-weight: 700;
         }
+        @include abstracts.screen(md) {
+            &--block {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+            }
+        }
     }
 
     &__sub-label {
@@ -152,25 +160,32 @@
     &__text-input {
         margin-top: 20px;
     }
+
+    &__check-all {
+        margin: 30px 0;
+    }
 }
 
-.cart-info + .cart-info {
+// end page-container
+
+.page-container + .page-container {
     margin-top: 30px;
 }
 
 .cart-item {
     padding: 30px 0;
     display: flex;
-    gap: 30px;
+    // gap: 30px;
     border-bottom: 1px solid var(--checkout-cart-item-border);
 
     @include abstracts.screen(md) {
-        gap: 16px;
+        // gap: 16px;
         padding: 16px 0;
     }
     &__thumb {
         width: 175px;
         height: 172px;
+        margin: 0 30px 0 20px;
         object-fit: contain;
         @include abstracts.screen(xl) {
             width: 150px;
@@ -179,6 +194,12 @@
         @include abstracts.screen(lg) {
             width: 100px;
             height: 100px;
+        }
+        @include abstracts.screen(md) {
+            margin: 0 16px;
+        }
+        @include abstracts.screen(sm) {
+            margin: 0 8px;
         }
     }
 
@@ -220,12 +241,25 @@
         color: #67b044;
     }
 
+    &__ctrl-wrap {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
     &-ctrl {
         display: flex;
         align-items: center;
         gap: 20px;
         margin-top: auto;
         min-height: 44px;
+        @include abstracts.screen(sm) {
+            gap: 10px;
+        }
 
         &--md-column {
             @include abstracts.screen(md) {
@@ -274,7 +308,14 @@
             border: none;
         }
     }
+    &__checkout-btn {
+        margin-top: auto;
+        @include abstracts.screen(md) {
+            max-width: 200px;
+        }
+    }
 }
+// end- cart-tem
 
 .gift-item {
     display: flex;
