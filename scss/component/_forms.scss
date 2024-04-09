@@ -72,8 +72,10 @@ $error-color: #d5544b;
         display: flex;
         align-items: center;
         gap: 30px;
+
         @include abstracts.screen(md) {
             gap: 20px;
+            align-items: flex-end;
         }
         @include abstracts.screen(sm) {
             margin-top: -20px;

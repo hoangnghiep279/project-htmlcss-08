@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .profile {
     margin-bottom: 50px;
     &__container {
@@ -71,7 +73,7 @@
             line-height: 146.667%;
 
             &:hover {
-                background: #ebebeb;
+                background: var(--profile-sidebar-hover);
                 border-radius: 5px;
             }
         }
@@ -89,12 +91,14 @@
 
 .favourite-item {
     display: flex;
+    align-items: center;
     gap: 20px;
 
     &__thumb {
-        width: 151px;
-        height: 108px;
-        object-fit: contain;
+        width: 110px;
+        @include abstracts.screen(lg) {
+            width: 80px;
+        }
     }
 
     &__title {
@@ -107,6 +111,10 @@
         align-items: center;
         margin-top: 15px;
         gap: 20px;
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__price {

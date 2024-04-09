@@ -14,7 +14,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: Gordita, sans-serif;
+    font-family: lato, sans-serif;
     color: var(--text-color);
     background: var(--body-bg);
 }
@@ -78,4 +78,6 @@ strong {
 
 .separate {
     margin: var(--margin) 0;
+    height: 1px;
+    background: var(--separate-color);
 }
